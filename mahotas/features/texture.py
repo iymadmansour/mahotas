@@ -324,7 +324,7 @@ def haralick_features(cmats,
         crosspxpy = np.outer(px,py)
         crosspxpy += (crosspxpy == 0) # This makes log(0) become log(1), and thus evaluate to zero, such that everything works below:
         crosspxpy = crosspxpy.ravel()
-        HXY1 = -np.dot(pravel, np.log2(crosspxpy))
+        HXY1 = -np.dot(pravel, np.log(crosspxpy))
         HXY2 = _entropy(crosspxpy)
 
         if max(HX, HY) == 0.:
