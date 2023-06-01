@@ -18,7 +18,7 @@ def _entropy(p):
     p = p.ravel()
     p1 = p.copy()
     p1 += (p==0)
-    return -np.dot(np.log2(p1), p)
+    return -np.dot(np.log(p1), p)
 
 
 def haralick(f,
